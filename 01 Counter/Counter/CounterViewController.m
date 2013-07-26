@@ -16,20 +16,18 @@
 
 - (IBAction)plusOne
 {
-	// ++ count
-	// send new counter value to display
+	self.display.text = [NSString stringWithFormat:@"%d",++self.count];
 }
 
 - (IBAction)minusOne
 {
-	// -- count
-	// send new counter value to display
+	self.display.text = [NSString stringWithFormat:@"%d",--self.count];
 }
 
 - (IBAction)reset
 {
-	// 0 count
-	// send 0 to display
+	self.count = 0;
+	self.display.text = @"0";
 }
 
 @end
