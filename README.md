@@ -1,4 +1,4 @@
-Objective-C-marathon
+Objective-C Marathon
 ====================
 
-Objective-C Marathon
+1. Simple counter app for iPhone
