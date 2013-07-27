@@ -68,4 +68,9 @@
 	return [phrasesStorage objectAtIndex:randomNumber];
 }
 
+- (BOOL)shouldAutorotate
+{
+	return NO;
+}
+
 @end
