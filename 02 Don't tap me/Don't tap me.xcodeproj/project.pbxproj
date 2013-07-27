@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E603D66B17A45F66004B7B7A /* hi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E603D66A17A45F66004B7B7A /* hi-icon.png */; };
 		E6280AF817A44C490071AC8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6280AF717A44C490071AC8D /* UIKit.framework */; };
 		E6280AFA17A44C490071AC8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6280AF917A44C490071AC8D /* Foundation.framework */; };
 		E6280AFC17A44C490071AC8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6280AFB17A44C490071AC8D /* CoreGraphics.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E603D66A17A45F66004B7B7A /* hi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hi-icon.png"; sourceTree = "<group>"; };
 		E6280AF417A44C490071AC8D /* Don't tap me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Don't tap me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6280AF717A44C490071AC8D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6280AF917A44C490071AC8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -56,6 +58,7 @@
 		E6280AEB17A44C490071AC8D = {
 			isa = PBXGroup;
 			children = (
+				E603D66A17A45F66004B7B7A /* hi-icon.png */,
 				E6280AFD17A44C490071AC8D /* Don't tap me */,
 				E6280AF617A44C490071AC8D /* Frameworks */,
 				E6280AF517A44C490071AC8D /* Products */,
@@ -164,6 +167,7 @@
 				E6280B0C17A44C490071AC8D /* Default@2x.png in Resources */,
 				E6280B0E17A44C490071AC8D /* Default-568h@2x.png in Resources */,
 				E6280B1117A44C490071AC8D /* MainStoryboard.storyboard in Resources */,
+				E603D66B17A45F66004B7B7A /* hi-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +303,7 @@
 				E6280B1917A44C490071AC8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
