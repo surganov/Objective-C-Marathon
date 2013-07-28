@@ -1,0 +1,30 @@
+//
+// Prefix header for all source files of the 'De Stijl' target in the 'De Stijl' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+#endif
+
+#ifndef NDEBUG
+#import <Foundation/Foundation.h>
+#import <stdio.h>
+
+extern void _NSSetLogCStringFunction(void (*)(const char *string, unsigned length, BOOL withSyslogBanner));
+
+static void PrintNSLogMessage(const char *string, unsigned length, BOOL withSyslogBanner){
+    puts(string);
+}
+
+static void HackNSLog(void) __attribute__((constructor));
+static void HackNSLog(void){
+    _NSSetLogCStringFunction(PrintNSLogMessage);
+}
+#endif
