@@ -69,13 +69,34 @@
 - (void)drawRect:(CGRect)rect
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
+
+	UIColor *red = [UIColor colorWithRed:0.9058823529411765 green:0.2980392156862745 blue:0.23529411764705882 alpha:1.0];
+	UIColor *yellow = [UIColor colorWithRed:0.9450980392156862 green:0.7686274509803922 blue:0.058823529411764705 alpha:1.0];
+	UIColor *blue = [UIColor colorWithRed:0.20392156862745098 green:0.596078431372549 blue:0.8588235294117647 alpha:1.0];
 	
-	[[UIColor yellowColor] setFill];
+	[red setFill];
+	UIRectFill(CGRectMake(0, 0, self.centerPoint.x, self.centerPoint.y));
 	
-	CGContextSetLineWidth(context, 5.0);
-	[[UIColor blueColor] setStroke];
+	[yellow setFill];
+	UIRectFill(CGRectMake(self.centerPoint.x, 0, self.bounds.size.width-self.centerPoint.x, self.centerPoint.y));
 	
-	[self drawCircleAtPoint:self.centerPoint withRadius:30 inContext:context];
+	[[UIColor whiteColor] setFill];
+	UIRectFill(CGRectMake(0, self.centerPoint.y, self.centerPoint.x, self.bounds.size.height-self.centerPoint.y));
+
+	[blue setFill];
+	UIRectFill(CGRectMake(self.centerPoint.x, self.centerPoint.y, self.bounds.size.width, self.bounds.size.height));
+	
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetLineWidth(context, 18);
+    CGContextMoveToPoint(context, 0, self.centerPoint.y);
+    CGContextAddLineToPoint(context, self.bounds.size.width, self.centerPoint.y);
+    CGContextStrokePath(context);
+	
+	CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetLineWidth(context, 18);
+    CGContextMoveToPoint(context, self.centerPoint.x, 0);
+    CGContextAddLineToPoint(context, self.centerPoint.x, self.bounds.size.height);
+    CGContextStrokePath(context);
 }
 
 @end

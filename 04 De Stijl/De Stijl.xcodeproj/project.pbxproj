@@ -19,6 +19,7 @@
 		E62D72DF17A59FA900FB485A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E62D72DD17A59FA900FB485A /* MainStoryboard.storyboard */; };
 		E62D72E217A59FA900FB485A /* DeStijlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E62D72E117A59FA900FB485A /* DeStijlViewController.m */; };
 		E62D72EA17A5A03700FB485A /* Painting.m in Sources */ = {isa = PBXBuildFile; fileRef = E62D72E917A5A03700FB485A /* Painting.m */; };
+		E62D72EC17A5BFD500FB485A /* de-stijl-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E62D72EB17A5BFD500FB485A /* de-stijl-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E62D72E117A59FA900FB485A /* DeStijlViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeStijlViewController.m; sourceTree = "<group>"; };
 		E62D72E817A5A03700FB485A /* Painting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Painting.h; sourceTree = "<group>"; };
 		E62D72E917A5A03700FB485A /* Painting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Painting.m; sourceTree = "<group>"; };
+		E62D72EB17A5BFD500FB485A /* de-stijl-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "de-stijl-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		E62D72B917A59FA900FB485A = {
 			isa = PBXGroup;
 			children = (
+				E62D72EB17A5BFD500FB485A /* de-stijl-icon.png */,
 				E62D72CB17A59FA900FB485A /* De Stijl */,
 				E62D72C417A59FA900FB485A /* Frameworks */,
 				E62D72C317A59FA900FB485A /* Products */,
@@ -169,6 +172,7 @@
 				E62D72DA17A59FA900FB485A /* Default@2x.png in Resources */,
 				E62D72DC17A59FA900FB485A /* Default-568h@2x.png in Resources */,
 				E62D72DF17A59FA900FB485A /* MainStoryboard.storyboard in Resources */,
+				E62D72EC17A5BFD500FB485A /* de-stijl-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
