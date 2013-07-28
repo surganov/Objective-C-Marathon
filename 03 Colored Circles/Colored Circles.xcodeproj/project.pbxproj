@@ -16,9 +16,8 @@
 		E620F02117A5524700D55CB2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E620F02017A5524700D55CB2 /* Default.png */; };
 		E620F02317A5524700D55CB2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E620F02217A5524700D55CB2 /* Default@2x.png */; };
 		E620F02517A5524700D55CB2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E620F02417A5524700D55CB2 /* Default-568h@2x.png */; };
-		E620F02817A5524700D55CB2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E620F02617A5524700D55CB2 /* MainStoryboard.storyboard */; };
 		E620F02B17A5524700D55CB2 /* ColoredCirclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E620F02A17A5524700D55CB2 /* ColoredCirclesViewController.m */; };
-		E620F03317A552E200D55CB2 /* CirclesView.m in Sources */ = {isa = PBXBuildFile; fileRef = E620F03217A552E200D55CB2 /* CirclesView.m */; };
+		E620F03617A55D2D00D55CB2 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = E620F03517A55D2D00D55CB2 /* Circle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,11 +34,10 @@
 		E620F02017A5524700D55CB2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		E620F02217A5524700D55CB2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		E620F02417A5524700D55CB2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		E620F02717A5524700D55CB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E620F02917A5524700D55CB2 /* ColoredCirclesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColoredCirclesViewController.h; sourceTree = "<group>"; };
 		E620F02A17A5524700D55CB2 /* ColoredCirclesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColoredCirclesViewController.m; sourceTree = "<group>"; };
-		E620F03117A552E200D55CB2 /* CirclesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclesView.h; sourceTree = "<group>"; };
-		E620F03217A552E200D55CB2 /* CirclesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclesView.m; sourceTree = "<group>"; };
+		E620F03417A55D2D00D55CB2 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		E620F03517A55D2D00D55CB2 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +84,12 @@
 		E620F01417A5524700D55CB2 /* Colored Circles */ = {
 			isa = PBXGroup;
 			children = (
+				E620F03417A55D2D00D55CB2 /* Circle.h */,
+				E620F03517A55D2D00D55CB2 /* Circle.m */,
 				E620F01D17A5524700D55CB2 /* ColoredCirclesAppDelegate.h */,
 				E620F01E17A5524700D55CB2 /* ColoredCirclesAppDelegate.m */,
-				E620F02617A5524700D55CB2 /* MainStoryboard.storyboard */,
 				E620F02917A5524700D55CB2 /* ColoredCirclesViewController.h */,
 				E620F02A17A5524700D55CB2 /* ColoredCirclesViewController.m */,
-				E620F03117A552E200D55CB2 /* CirclesView.h */,
-				E620F03217A552E200D55CB2 /* CirclesView.m */,
 				E620F01517A5524700D55CB2 /* Supporting Files */,
 			);
 			path = "Colored Circles";
@@ -168,7 +165,6 @@
 				E620F02117A5524700D55CB2 /* Default.png in Resources */,
 				E620F02317A5524700D55CB2 /* Default@2x.png in Resources */,
 				E620F02517A5524700D55CB2 /* Default-568h@2x.png in Resources */,
-				E620F02817A5524700D55CB2 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +178,7 @@
 				E620F01B17A5524700D55CB2 /* main.m in Sources */,
 				E620F01F17A5524700D55CB2 /* ColoredCirclesAppDelegate.m in Sources */,
 				E620F02B17A5524700D55CB2 /* ColoredCirclesViewController.m in Sources */,
-				E620F03317A552E200D55CB2 /* CirclesView.m in Sources */,
+				E620F03617A55D2D00D55CB2 /* Circle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +191,6 @@
 				E620F01817A5524700D55CB2 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E620F02617A5524700D55CB2 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E620F02717A5524700D55CB2 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

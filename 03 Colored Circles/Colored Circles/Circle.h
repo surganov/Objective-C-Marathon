@@ -1,5 +1,5 @@
 //
-//  CirclesView.h
+//  Circle.h
 //  Colored Circles
 //
 //  Created by Sergey Surganov on 28.07.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CirclesView : UIView
+@interface Circle : UIView
 
 @end

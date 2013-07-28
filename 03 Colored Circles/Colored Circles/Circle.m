@@ -1,14 +1,14 @@
 //
-//  CirclesView.m
+//  Circle.m
 //  Colored Circles
 //
 //  Created by Sergey Surganov on 28.07.13.
 //  Copyright (c) 2013 Sergey Surganov. All rights reserved.
 //
 
-#import "CirclesView.h"
+#import "Circle.h"
 
-@implementation CirclesView
+@implementation Circle
 
 - (void)setup
 {
@@ -25,37 +25,33 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
+		self.backgroundColor = [UIColor yellowColor];
     }
     return self;
 }
 
-- (void)drawCircleAtPoint:(CGPoint)p withRadius:(CGFloat)radius inContext:(CGContextRef)context
-{
-	UIGraphicsPushContext(context);
-	CGContextBeginPath(context);
-	CGContextAddArc(context, p.x, p.y, radius, 0, 2*M_PI, YES);
-	CGContextStrokePath(context);
-	UIGraphicsPopContext();
-}
 
 - (void)drawRect:(CGRect)rect
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	
+
 	CGPoint midPoint;
+	midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
+	midPoint.y = self.bounds.origin.y + self.bounds.size.height/2;
 	
-	midPoint.x = 150;
-	midPoint.y = 150;
+	CGFloat size = self.bounds.size.width/2;
+	if (self.bounds.size.height < self.bounds.size.width) size = self.bounds.size.height/2;
+	
 
 	CGContextSetLineWidth(context, 5.0);
 	[[UIColor blueColor] setStroke];
 	
-	[self drawCircleAtPoint:midPoint withRadius:60 inContext:context];
+	UIGraphicsPushContext(context);
+	CGContextBeginPath(context);
+	CGContextAddArc(context, midPoint.x, midPoint.y, size, 0, 2*M_PI, YES);
+	CGContextStrokePath(context);
+	UIGraphicsPopContext();
 
-	midPoint.x = 150;
-	midPoint.y = 350;
-	
-	[self drawCircleAtPoint:midPoint withRadius:60 inContext:context];
 }
-
+	
 @end
