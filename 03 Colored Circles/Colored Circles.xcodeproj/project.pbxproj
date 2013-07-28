@@ -19,6 +19,7 @@
 		E620F02B17A5524700D55CB2 /* ColoredCirclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E620F02A17A5524700D55CB2 /* ColoredCirclesViewController.m */; };
 		E620F03617A55D2D00D55CB2 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = E620F03517A55D2D00D55CB2 /* Circle.m */; };
 		E6CE3CD417A5773C00F7CB37 /* color-circles.png in Resources */ = {isa = PBXBuildFile; fileRef = E6CE3CD317A5773C00F7CB37 /* color-circles.png */; };
+		E6CE3CD617A577A500F7CB37 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6CE3CD517A577A500F7CB37 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E620F03417A55D2D00D55CB2 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
 		E620F03517A55D2D00D55CB2 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 		E6CE3CD317A5773C00F7CB37 /* color-circles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "color-circles.png"; sourceTree = "<group>"; };
+		E6CE3CD517A577A500F7CB37 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../../../MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				E620F03417A55D2D00D55CB2 /* Circle.h */,
 				E620F03517A55D2D00D55CB2 /* Circle.m */,
+				E6CE3CD517A577A500F7CB37 /* MainStoryboard.storyboard */,
 				E620F01D17A5524700D55CB2 /* ColoredCirclesAppDelegate.h */,
 				E620F01E17A5524700D55CB2 /* ColoredCirclesAppDelegate.m */,
 				E620F02917A5524700D55CB2 /* ColoredCirclesViewController.h */,
@@ -169,6 +172,7 @@
 				E620F02317A5524700D55CB2 /* Default@2x.png in Resources */,
 				E620F02517A5524700D55CB2 /* Default-568h@2x.png in Resources */,
 				E6CE3CD417A5773C00F7CB37 /* color-circles.png in Resources */,
+				E6CE3CD617A577A500F7CB37 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
