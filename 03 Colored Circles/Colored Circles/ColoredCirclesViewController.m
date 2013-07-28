@@ -20,7 +20,9 @@
 	UITapGestureRecognizer *singleFingerTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
 	[self.view addGestureRecognizer:singleFingerTap];
 	
-//	self.view.backgroundColor = [UIColor blackColor];
+	UIColor *midnightBlueFlatColor = [UIColor colorWithRed:0.17254901960784313 green:0.24313725490196078 blue:0.3137254901960784 alpha:1.0];
+	
+	self.view.backgroundColor = midnightBlueFlatColor;
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
@@ -28,17 +30,19 @@
     if(recognizer.state == UIGestureRecognizerStateRecognized)
     {
         CGPoint point = [recognizer locationInView:recognizer.view];
-//        NSLog(@"%@",NSStringFromCGPoint(point));
 		[self drawCircleAtPoint:point];
     }
 }
 
 - (void)drawCircleAtPoint:(CGPoint)point
 {
-	CGRect frame = [UIScreen mainScreen].bounds;
-	frame.size.height = 50;
-	frame.size.width = 50;
-	frame.origin = point;
+	int lowerBound = 15;
+	int upperBound = 70;
+	int randomValue = lowerBound + arc4random() % (upperBound - lowerBound);
+	
+	CGFloat size = randomValue;
+	CGRect frame = CGRectMake(point.x-size/2, point.y-size/2, size, size);
+
 	Circle *circle = [[Circle alloc] initWithFrame:frame];
 	[self.view addSubview:circle];
 }
