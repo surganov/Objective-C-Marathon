@@ -25,7 +25,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setup];
-		self.backgroundColor = [UIColor yellowColor];
+		self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -34,24 +34,8 @@
 - (void)drawRect:(CGRect)rect
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
-
-	CGPoint midPoint;
-	midPoint.x = self.bounds.origin.x + self.bounds.size.width/2;
-	midPoint.y = self.bounds.origin.y + self.bounds.size.height/2;
-	
-	CGFloat size = self.bounds.size.width/2;
-	if (self.bounds.size.height < self.bounds.size.width) size = self.bounds.size.height/2;
-	
-
-	CGContextSetLineWidth(context, 5.0);
-	[[UIColor blueColor] setStroke];
-	
-	UIGraphicsPushContext(context);
-	CGContextBeginPath(context);
-	CGContextAddArc(context, midPoint.x, midPoint.y, size, 0, 2*M_PI, YES);
-	CGContextStrokePath(context);
-	UIGraphicsPopContext();
-
+	CGContextSetRGBFillColor(context, 0, 0, 255, 1);
+	CGContextFillEllipseInRect(context, CGRectMake(0, 0, 50, 50));
 }
-	
+
 @end
