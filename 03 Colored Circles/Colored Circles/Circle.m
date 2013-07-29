@@ -35,11 +35,11 @@
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
 
-	[[self getRandomColor] setFill];
+	[[self randomColor] setFill];
 	CGContextFillEllipseInRect(context, CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height));
 }
 
-- (UIColor *)getRandomColor
+- (UIColor *)randomColor
 {
 	NSArray *flatColors = @[
 		[UIColor colorWithRed:0.10196078431372549 green:0.7372549019607844 blue:0.611764705882353 alpha:1.0],
