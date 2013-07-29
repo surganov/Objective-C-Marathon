@@ -11,6 +11,5 @@
 @interface CounterViewController : UIViewController
 
 @property (nonatomic) int count;
-@property (strong, nonatomic) IBOutlet UILabel *display;
 
 @end

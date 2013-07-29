@@ -12,14 +12,18 @@
 
 @synthesize centerPoint = _centerPoint;
 
-- (CGPoint)centerPoint
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-	if (_centerPoint.x == 0 && _centerPoint.y == 0) {
-		return CGPointMake(150, 150);
-	} else {
-		return _centerPoint;
-	}
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        _centerPoint = CGPointMake(150, 150);
+        self.contentMode = UIViewContentModeRedraw; // Could as well go here, but, actually, doesn't change a thing
+    }
+
+    return self;
 }
+
 
 - (void)setCenterPoint:(CGPoint)centerPoint
 {
@@ -27,25 +31,6 @@
 	[self setNeedsDisplay];
 }
 
-
-- (void)setup
-{
-	self.contentMode = UIViewContentModeRedraw;
-}
-
-- (void)awakeFromNib
-{
-	[self setup];
-}
-
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gesture
 {

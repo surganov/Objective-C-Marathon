@@ -10,24 +10,31 @@
 
 @interface CounterViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *display;
+
 @end
 
 @implementation CounterViewController
 
+- (void)setCount:(int)count
+{
+    _count = count;
+    self.display.text = [NSString stringWithFormat:@"%d", _count];
+}
+
 - (IBAction)plusOne
 {
-	self.display.text = [NSString stringWithFormat:@"%d",++self.count];
+	++self.count;
 }
 
 - (IBAction)minusOne
 {
-	self.display.text = [NSString stringWithFormat:@"%d",--self.count];
+	--self.count;
 }
 
 - (IBAction)reset
 {
 	self.count = 0;
-	self.display.text = @"0";
 }
 
 @end
