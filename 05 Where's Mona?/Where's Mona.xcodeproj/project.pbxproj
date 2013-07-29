@@ -22,17 +22,18 @@
 		E69C902C17A7072700C3E23D /* mona-landscape-right.png in Resources */ = {isa = PBXBuildFile; fileRef = E69C902817A7072700C3E23D /* mona-landscape-right.png */; };
 		E69C902D17A7072700C3E23D /* mona-portrait-upside-down.png in Resources */ = {isa = PBXBuildFile; fileRef = E69C902917A7072700C3E23D /* mona-portrait-upside-down.png */; };
 		E69C902E17A7072700C3E23D /* mona-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = E69C902A17A7072700C3E23D /* mona-portrait.png */; };
+		E6E1251417A7180300C5CB73 /* where's-mona-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E1251317A7180300C5CB73 /* where's-mona-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E69C8FFE17A7062800C3E23D /* Where's Mona?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's Mona?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E69C8FFE17A7062800C3E23D /* Where's Mona.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's Mona.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E69C900117A7062800C3E23D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E69C900317A7062800C3E23D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E69C900517A7062800C3E23D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		E69C900917A7062800C3E23D /* Where's Mona?-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Where's Mona?-Info.plist"; sourceTree = "<group>"; };
+		E69C900917A7062800C3E23D /* Where's Mona-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Where's Mona-Info.plist"; sourceTree = "<group>"; };
 		E69C900B17A7062800C3E23D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E69C900D17A7062800C3E23D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E69C900F17A7062800C3E23D /* Where's Mona?-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Where's Mona?-Prefix.pch"; sourceTree = "<group>"; };
+		E69C900F17A7062800C3E23D /* Where's Mona-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Where's Mona-Prefix.pch"; sourceTree = "<group>"; };
 		E69C901017A7062800C3E23D /* MonaAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonaAppDelegate.h; sourceTree = "<group>"; };
 		E69C901117A7062800C3E23D /* MonaAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonaAppDelegate.m; sourceTree = "<group>"; };
 		E69C901317A7062800C3E23D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -45,6 +46,7 @@
 		E69C902817A7072700C3E23D /* mona-landscape-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mona-landscape-right.png"; sourceTree = "<group>"; };
 		E69C902917A7072700C3E23D /* mona-portrait-upside-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mona-portrait-upside-down.png"; sourceTree = "<group>"; };
 		E69C902A17A7072700C3E23D /* mona-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mona-portrait.png"; sourceTree = "<group>"; };
+		E6E1251317A7180300C5CB73 /* where's-mona-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "where's-mona-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		E69C8FF517A7062800C3E23D = {
 			isa = PBXGroup;
 			children = (
+				E6E1251317A7180300C5CB73 /* where's-mona-icon.png */,
 				E69C900717A7062800C3E23D /* Where's Mona? */,
 				E69C900017A7062800C3E23D /* Frameworks */,
 				E69C8FFF17A7062800C3E23D /* Products */,
@@ -73,7 +76,7 @@
 		E69C8FFF17A7062800C3E23D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E69C8FFE17A7062800C3E23D /* Where's Mona?.app */,
+				E69C8FFE17A7062800C3E23D /* Where's Mona.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,10 +108,10 @@
 		E69C900817A7062800C3E23D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E69C900917A7062800C3E23D /* Where's Mona?-Info.plist */,
+				E69C900917A7062800C3E23D /* Where's Mona-Info.plist */,
 				E69C900A17A7062800C3E23D /* InfoPlist.strings */,
 				E69C900D17A7062800C3E23D /* main.m */,
-				E69C900F17A7062800C3E23D /* Where's Mona?-Prefix.pch */,
+				E69C900F17A7062800C3E23D /* Where's Mona-Prefix.pch */,
 				E69C901317A7062800C3E23D /* Default.png */,
 				E69C901517A7062800C3E23D /* Default@2x.png */,
 				E69C901717A7062800C3E23D /* Default-568h@2x.png */,
@@ -130,9 +133,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E69C8FFD17A7062800C3E23D /* Where's Mona? */ = {
+		E69C8FFD17A7062800C3E23D /* Where's Mona */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E69C902117A7062800C3E23D /* Build configuration list for PBXNativeTarget "Where's Mona?" */;
+			buildConfigurationList = E69C902117A7062800C3E23D /* Build configuration list for PBXNativeTarget "Where's Mona" */;
 			buildPhases = (
 				E69C8FFA17A7062800C3E23D /* Sources */,
 				E69C8FFB17A7062800C3E23D /* Frameworks */,
@@ -142,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = "Where's Mona?";
+			name = "Where's Mona";
 			productName = "Where's Mona?";
-			productReference = E69C8FFE17A7062800C3E23D /* Where's Mona?.app */;
+			productReference = E69C8FFE17A7062800C3E23D /* Where's Mona.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -157,7 +160,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Sergey Surganov";
 			};
-			buildConfigurationList = E69C8FF917A7062800C3E23D /* Build configuration list for PBXProject "Where's Mona?" */;
+			buildConfigurationList = E69C8FF917A7062800C3E23D /* Build configuration list for PBXProject "Where's Mona" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -169,7 +172,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E69C8FFD17A7062800C3E23D /* Where's Mona? */,
+				E69C8FFD17A7062800C3E23D /* Where's Mona */,
 			);
 		};
 /* End PBXProject section */
@@ -188,6 +191,7 @@
 				E69C902C17A7072700C3E23D /* mona-landscape-right.png in Resources */,
 				E69C902D17A7072700C3E23D /* mona-portrait-upside-down.png in Resources */,
 				E69C902E17A7072700C3E23D /* mona-portrait.png in Resources */,
+				E6E1251417A7180300C5CB73 /* where's-mona-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Where's Mona?/Where's Mona?-Prefix.pch";
-				INFOPLIST_FILE = "Where's Mona?/Where's Mona?-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Where's Mona?/Where's Mona-Prefix.pch";
+				INFOPLIST_FILE = "Where's Mona?/Where's Mona-Info.plist";
+				PRODUCT_NAME = "Where's Mona";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -297,9 +301,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Where's Mona?/Where's Mona?-Prefix.pch";
-				INFOPLIST_FILE = "Where's Mona?/Where's Mona?-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Where's Mona?/Where's Mona-Prefix.pch";
+				INFOPLIST_FILE = "Where's Mona?/Where's Mona-Info.plist";
+				PRODUCT_NAME = "Where's Mona";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -307,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E69C8FF917A7062800C3E23D /* Build configuration list for PBXProject "Where's Mona?" */ = {
+		E69C8FF917A7062800C3E23D /* Build configuration list for PBXProject "Where's Mona" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E69C901F17A7062800C3E23D /* Debug */,
@@ -316,13 +320,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E69C902117A7062800C3E23D /* Build configuration list for PBXNativeTarget "Where's Mona?" */ = {
+		E69C902117A7062800C3E23D /* Build configuration list for PBXNativeTarget "Where's Mona" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E69C902217A7062800C3E23D /* Debug */,
 				E69C902317A7062800C3E23D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

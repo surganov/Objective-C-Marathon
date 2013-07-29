@@ -14,6 +14,30 @@
 
 @implementation MonaViewController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+//	UIInterfaceOrientation orientation = [[UIDevice currentDevice] orientation];
+//	animated = NO;
+//	UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+//	if (orientation == UIDeviceOrientationLandscapeLeft) {
+//		NSLog(@"left");
+//	}
+}
+
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [UIView setAnimationsEnabled:NO];
+}
+
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    [UIView setAnimationsEnabled:NO];
+	/* Your original orientation booleans*/
+	
+    return TRUE;
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -22,7 +46,33 @@
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-	NSLog(@"It's rotates!");
+	duration = 5.0;
+	switch (toInterfaceOrientation) {
+		case UIInterfaceOrientationPortrait:
+			self.imageHolder.image = [UIImage imageNamed:@"mona-portrait.png"];
+			NSLog(@"portrait");
+			break;
+		case UIInterfaceOrientationLandscapeLeft:
+			self.imageHolder.image = [UIImage imageNamed:@"mona-landscape-right.png"];
+			NSLog(@"left");
+			break;
+		case UIInterfaceOrientationLandscapeRight:
+			self.imageHolder.image = [UIImage imageNamed:@"mona-landscape-left.png"];
+			NSLog(@"right");
+			break;
+		case UIInterfaceOrientationPortraitUpsideDown:
+			self.imageHolder.image = [UIImage imageNamed:@"mona-portrait-upside-down.png"];
+			NSLog(@"upside down");
+			break;
+			
+		default:
+			break;
+	}
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+	return UIInterfaceOrientationMaskAll;
 }
 
 @end

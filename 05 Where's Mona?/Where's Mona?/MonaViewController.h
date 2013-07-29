@@ -10,4 +10,6 @@
 
 @interface MonaViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageHolder;
+
 @end
