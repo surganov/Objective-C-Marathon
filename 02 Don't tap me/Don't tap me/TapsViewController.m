@@ -36,32 +36,35 @@
 
 - (NSString *)randomPhrase
 {
-	NSArray *phrasesStorage = @[
-		@"I have nothing for you.\n\n",
-		@"You can go home now.\n\n",
-		@"I told you enough.\n\n",
-		@"You haven't done\nyour previous exercise.",
-		@"It was very nice to meet you.\n\n",
-		@"Leave me alone, please.\n\n",
-		@"I need some rest.\n\n",
-		@"Oh, it's you again.\n\n",
-		@"You can close the app now.\n\n",
-		@"Go and do some work.\n\n",
-		@"Stop tap like crazy!\nDo you think I'm iron?",
-		@"Come later.\n\n",
-		@"Easy there!\n\n",
-		@"I told you, I have\nnothing for you!\n\n",
-		@"Why it is do hard to understand?\n\n",
-		@"I spell it for you:\nG E T  O F F.",
-		@"You can quit now.\n\n",
-		@"You make me really angry!\n\n",
-		@"Ok, you got me. Happy?\n\n",
-		@"You won.\n\n",
-		@"This is the last time.\n\n",
-		@"Don't say anybody.\n\n",
-		@"It's over for today.\n\n",
-		@"Isn't it enough for you?\n\n"
-		];
+    static NSArray *phrasesStorage = nil;
+
+	if (!phrasesStorage)
+        phrasesStorage = @[
+                           @"I have nothing for you.\n\n",
+                           @"You can go home now.\n\n",
+                           @"I told you enough.\n\n",
+                           @"You haven't done\nyour previous exercise.",
+                           @"It was very nice to meet you.\n\n",
+                           @"Leave me alone, please.\n\n",
+                           @"I need some rest.\n\n",
+                           @"Oh, it's you again.\n\n",
+                           @"You can close the app now.\n\n",
+                           @"Go and do some work.\n\n",
+                           @"Stop tap like crazy!\nDo you think I'm iron?",
+                           @"Come later.\n\n",
+                           @"Easy there!\n\n",
+                           @"I told you, I have\nnothing for you!\n\n",
+                           @"Why it is do hard to understand?\n\n",
+                           @"I spell it for you:\nG E T  O F F.",
+                           @"You can quit now.\n\n",
+                           @"You make me really angry!\n\n",
+                           @"Ok, you got me. Happy?\n\n",
+                           @"You won.\n\n",
+                           @"This is the last time.\n\n",
+                           @"Don't say anybody.\n\n",
+                           @"It's over for today.\n\n",
+                           @"Isn't it enough for you?\n\n"
+                           ];
 	
 	uint32_t randomNumber = arc4random_uniform([phrasesStorage count]);
 	
