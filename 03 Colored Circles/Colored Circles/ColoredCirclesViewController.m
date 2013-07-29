@@ -38,7 +38,7 @@
 {
 	int lowerBound = 15;
 	int upperBound = 70;
-	int randomValue = lowerBound + arc4random() % (upperBound - lowerBound);
+	int randomValue = lowerBound + arc4random_uniform(upperBound - lowerBound);
 	
 	CGFloat size = randomValue;
 	CGRect frame = CGRectMake(point.x-size/2, point.y-size/2, size, size);
