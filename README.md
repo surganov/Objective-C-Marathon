@@ -31,5 +31,15 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 
 
 
+## Wanna learn
+1. How to animate UIViews (especially transitions between them)
+2. Concepts of protocols and delegations
+3. Object oriented programming concepts in practice: A PIE (Abstraction, Polymorphism, Inheritance, Encapsulation)
+4. How to store data between user sessions
+5. UIGestureRecognizer and all possible gestures in iOS
+6. Frame animation
+7. Augmented reality with Cocos2d
+8. Scroll views
+
 ## Contribution
 Feel free to pull requests to my code.
