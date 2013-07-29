@@ -41,7 +41,7 @@
 	int randomValue = lowerBound + arc4random_uniform(upperBound - lowerBound);
 	
 	CGFloat size = randomValue;
-	CGRect frame = CGRectMake(point.x-size/2, point.y-size/2, size, size);
+	CGRect frame = CGRectMake(roundf(point.x-size/2), roundf(point.y-size/2), size, size);
 
 	Circle *circle = [[Circle alloc] initWithFrame:frame];
 	[self.view addSubview:circle];
