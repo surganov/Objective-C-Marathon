@@ -16,8 +16,10 @@
 {
     self = [super initWithCoder:aDecoder];
     
-    if (self)
+    if (self) {
         _centerPoint = CGPointMake(150, 150);
+        self.contentMode = UIViewContentModeRedraw; // Could as well go here, but, actually, doesn't change a thing
+    }
 
     return self;
 }
@@ -29,16 +31,6 @@
 	[self setNeedsDisplay];
 }
 
-
-- (void)setup
-{
-	self.contentMode = UIViewContentModeRedraw;
-}
-
-- (void)awakeFromNib
-{
-	[self setup];
-}
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gesture
 {
