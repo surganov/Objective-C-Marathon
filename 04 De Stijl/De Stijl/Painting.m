@@ -40,15 +40,6 @@
 	[self setup];
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setup];
-    }
-    return self;
-}
-
 - (void)handlePanGesture:(UIPanGestureRecognizer *)gesture
 {
 	CGPoint translation = [gesture translationInView:self];
