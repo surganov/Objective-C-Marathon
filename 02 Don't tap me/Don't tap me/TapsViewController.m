@@ -31,10 +31,10 @@
 
 //	self.phrases.text = @"You tapped me!";
 	
-	self.phrases.text = [self pickPhrase];
+	self.phrases.text = [self randomPhrase];
 }
 
-- (NSString *)pickPhrase
+- (NSString *)randomPhrase
 {
 	NSArray *phrasesStorage = @[
 		@"I have nothing for you.\n\n",
