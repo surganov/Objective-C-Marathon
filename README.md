@@ -32,6 +32,9 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 6. 50 (or 256 to be precise) Shades of Gray
 *What I learned:* page-based application, categories, digging in some magic code.
 
+#### 7. Inside iPhone
+*What I learned:* how to make app without writing any line of code at all.
+
 
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
