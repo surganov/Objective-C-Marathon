@@ -12,6 +12,7 @@
 		E6028D2117A872AA003544C6 /* iphone5-inside-3.png in Resources */ = {isa = PBXBuildFile; fileRef = E6028D1D17A872AA003544C6 /* iphone5-inside-3.png */; };
 		E6028D2217A872AA003544C6 /* iphone5-inside-4.png in Resources */ = {isa = PBXBuildFile; fileRef = E6028D1E17A872AA003544C6 /* iphone5-inside-4.png */; };
 		E6028D2417A8751E003544C6 /* inner-jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = E6028D2317A8751E003544C6 /* inner-jobs.png */; };
+		E6028D2617A8771D003544C6 /* inside-iphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6028D2517A8771D003544C6 /* inside-iphone-icon.png */; };
 		E6197B1217A85B5F0084F18F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6197B1117A85B5F0084F18F /* UIKit.framework */; };
 		E6197B1417A85B5F0084F18F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6197B1317A85B5F0084F18F /* Foundation.framework */; };
 		E6197B1617A85B5F0084F18F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6197B1517A85B5F0084F18F /* CoreGraphics.framework */; };
@@ -31,6 +32,7 @@
 		E6028D1D17A872AA003544C6 /* iphone5-inside-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone5-inside-3.png"; sourceTree = "<group>"; };
 		E6028D1E17A872AA003544C6 /* iphone5-inside-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone5-inside-4.png"; sourceTree = "<group>"; };
 		E6028D2317A8751E003544C6 /* inner-jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inner-jobs.png"; sourceTree = "<group>"; };
+		E6028D2517A8771D003544C6 /* inside-iphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "inside-iphone-icon.png"; sourceTree = "<group>"; };
 		E6197B0E17A85B5F0084F18F /* Inside iPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inside iPhone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6197B1117A85B5F0084F18F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E6197B1317A85B5F0084F18F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,6 +80,7 @@
 		E6197B0517A85B5F0084F18F = {
 			isa = PBXGroup;
 			children = (
+				E6028D2517A8771D003544C6 /* inside-iphone-icon.png */,
 				E6197B1717A85B5F0084F18F /* Inside iPhone */,
 				E6197B1017A85B5F0084F18F /* Frameworks */,
 				E6197B0F17A85B5F0084F18F /* Products */,
@@ -192,6 +195,7 @@
 				E6028D2117A872AA003544C6 /* iphone5-inside-3.png in Resources */,
 				E6028D2217A872AA003544C6 /* iphone5-inside-4.png in Resources */,
 				E6028D2417A8751E003544C6 /* inner-jobs.png in Resources */,
+				E6028D2617A8771D003544C6 /* inside-iphone-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
