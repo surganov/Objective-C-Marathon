@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Inside Iphone View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="InsideIphoneViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iphone5-inside-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3ih-pm-Iol"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="3ih-pm-Iol" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Ibt-Xa-zGp"/>
+                            <constraint firstItem="3ih-pm-Iol" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="Jaq-gP-Dio"/>
+                            <constraint firstItem="3ih-pm-Iol" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="X4m-Ld-x0B"/>
+                            <constraint firstItem="3ih-pm-Iol" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ph1-Qg-1lM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="mV5-v6-DpG" appends="YES" id="RGn-dj-jTq"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="mV5-v6-DpG">
+                    <connections>
+                        <segue destination="Wej-iz-r5r" kind="modal" modalTransitionStyle="partialCurl" id="dyp-mP-vtJ"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="106" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ucw-Id-dpR">
+            <objects>
+                <viewController id="Wej-iz-r5r" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mO-zx-O42">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iphone5-inside-2.png" translatesAutoresizingMaskIntoConstraints="NO" id="z8S-K2-KM3"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="z8S-K2-KM3" firstAttribute="bottom" secondItem="1mO-zx-O42" secondAttribute="bottom" type="default" id="Eu5-Sk-FlA"/>
+                            <constraint firstItem="z8S-K2-KM3" firstAttribute="leading" secondItem="1mO-zx-O42" secondAttribute="leading" type="default" id="cCt-TV-T05"/>
+                            <constraint firstItem="z8S-K2-KM3" firstAttribute="top" secondItem="1mO-zx-O42" secondAttribute="top" type="default" id="kUZ-0s-WSv"/>
+                            <constraint firstItem="z8S-K2-KM3" firstAttribute="trailing" secondItem="1mO-zx-O42" secondAttribute="trailing" type="default" id="seB-DT-ur1"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="4W8-9C-3Vk" appends="YES" id="OYp-Iz-3Xe"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Pa-N3-ZUn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kvs-9W-Tc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4W8-9C-3Vk">
+                    <connections>
+                        <segue destination="ON0-ft-KWo" kind="modal" modalTransitionStyle="partialCurl" id="t8w-Fk-Vkj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="483" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Aro-3y-AqK">
+            <objects>
+                <viewController id="ON0-ft-KWo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZUY-bb-4GR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iphone5-inside-3.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pjl-TF-aEB"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Pjl-TF-aEB" firstAttribute="bottom" secondItem="ZUY-bb-4GR" secondAttribute="bottom" type="default" id="5lH-vp-bsu"/>
+                            <constraint firstItem="Pjl-TF-aEB" firstAttribute="top" secondItem="ZUY-bb-4GR" secondAttribute="top" type="default" id="NaP-zk-56e"/>
+                            <constraint firstItem="Pjl-TF-aEB" firstAttribute="leading" secondItem="ZUY-bb-4GR" secondAttribute="leading" type="default" id="OZd-Br-7dO"/>
+                            <constraint firstItem="Pjl-TF-aEB" firstAttribute="trailing" secondItem="ZUY-bb-4GR" secondAttribute="trailing" type="default" id="qsR-pW-Bm8"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3Ym-OM-Z6v" appends="YES" id="4D7-qg-fAp"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCy-yo-m7s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3Ym-OM-Z6v">
+                    <connections>
+                        <segue destination="t4e-5Y-Ly0" kind="modal" modalTransitionStyle="partialCurl" id="0d4-eJ-DZq"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="876" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9rR-5y-rKs">
+            <objects>
+                <viewController id="t4e-5Y-Ly0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xNd-wG-BID">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="iphone5-inside-4.png" translatesAutoresizingMaskIntoConstraints="NO" id="cEC-VQ-W6F"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="cEC-VQ-W6F" firstAttribute="trailing" secondItem="xNd-wG-BID" secondAttribute="trailing" type="default" id="JX1-KB-Elk"/>
+                            <constraint firstItem="cEC-VQ-W6F" firstAttribute="bottom" secondItem="xNd-wG-BID" secondAttribute="bottom" type="default" id="cYv-ld-5q6"/>
+                            <constraint firstItem="cEC-VQ-W6F" firstAttribute="leading" secondItem="xNd-wG-BID" secondAttribute="leading" type="default" id="sXT-vo-le8"/>
+                            <constraint firstItem="cEC-VQ-W6F" firstAttribute="top" secondItem="xNd-wG-BID" secondAttribute="top" type="default" id="zYR-1R-1Ea"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5En-me-WCh" appends="YES" id="cUd-vD-y8N"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHb-kc-qbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5En-me-WCh">
+                    <connections>
+                        <segue destination="IkT-0x-e4v" kind="modal" modalTransitionStyle="partialCurl" id="OFU-6M-hsj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1255" y="138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m01-th-CR4">
+            <objects>
+                <viewController id="IkT-0x-e4v" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uga-JV-po3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="inner-jobs.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ixm-av-zXt"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ixm-av-zXt" firstAttribute="leading" secondItem="Uga-JV-po3" secondAttribute="leading" type="default" id="EAG-9l-NKq"/>
+                            <constraint firstItem="Ixm-av-zXt" firstAttribute="top" secondItem="Uga-JV-po3" secondAttribute="top" type="default" id="iLC-Cw-zlL"/>
+                            <constraint firstItem="Ixm-av-zXt" firstAttribute="trailing" secondItem="Uga-JV-po3" secondAttribute="trailing" type="default" id="man-J5-VQL"/>
+                            <constraint firstItem="Ixm-av-zXt" firstAttribute="bottom" secondItem="Uga-JV-po3" secondAttribute="bottom" type="default" id="njF-X9-bMj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqF-lq-7RW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inner-jobs.png" width="640" height="1136"/>
+        <image name="iphone5-inside-1.png" width="640" height="1136"/>
+        <image name="iphone5-inside-2.png" width="640" height="1136"/>
+        <image name="iphone5-inside-3.png" width="640" height="1136"/>
+        <image name="iphone5-inside-4.png" width="640" height="1136"/>
+    </resources>
+    <classes>
+        <class className="InsideIphoneViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InsideIphoneViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
