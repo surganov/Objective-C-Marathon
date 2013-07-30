@@ -29,6 +29,8 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 5. Where's Mona?
 *What I learned:* handling device rotation, loading different images to UIView, disabling device rotation animations (except the very first one), turning on upsideDown device position.
 
+#### 6. 50 (or 256 to be precise) Shades of Gray
+*What I learned:* page-based application, categories, digging in some magic code.
 
 
 ## Wanna learn
