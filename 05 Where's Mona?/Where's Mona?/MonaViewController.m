@@ -25,28 +25,12 @@
 }
 
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    
+    /* Disable system animations */
     [UIView setAnimationsEnabled:NO];
-}
-
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    [UIView setAnimationsEnabled:NO];
-	/* Your original orientation booleans*/
-	
-    return TRUE;
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
-{
-	duration = 5.0;
+    
+    /* Switcheroo */
 	switch (toInterfaceOrientation) {
 		case UIInterfaceOrientationPortrait:
 			self.imageHolder.image = [UIImage imageNamed:@"mona-portrait.png"];
@@ -68,6 +52,13 @@
 		default:
 			break;
 	}
+    
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (NSUInteger)supportedInterfaceOrientations
