@@ -20,6 +20,8 @@
 		E6197B9217A869120084F18F /* ShadesOfGreyDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6197B9117A869120084F18F /* ShadesOfGreyDataViewController.m */; };
 		E6197B9517A869120084F18F /* ShadesOfGreyModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6197B9417A869120084F18F /* ShadesOfGreyModelController.m */; };
 		E6197B9817A869120084F18F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6197B9617A869120084F18F /* MainStoryboard.storyboard */; };
+		E6C3390C17A86C6F006DF149 /* hexHolor.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C3390B17A86C6F006DF149 /* hexHolor.m */; };
+		E6C3390E17A86F1E006DF149 /* 50-shades-of-gray-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C3390D17A86F1E006DF149 /* 50-shades-of-gray-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		E6197B9317A869120084F18F /* ShadesOfGreyModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadesOfGreyModelController.h; sourceTree = "<group>"; };
 		E6197B9417A869120084F18F /* ShadesOfGreyModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadesOfGreyModelController.m; sourceTree = "<group>"; };
 		E6197B9717A869120084F18F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E6C3390A17A86C6F006DF149 /* hexHolor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hexHolor.h; sourceTree = "<group>"; };
+		E6C3390B17A86C6F006DF149 /* hexHolor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hexHolor.m; sourceTree = "<group>"; };
+		E6C3390D17A86F1E006DF149 /* 50-shades-of-gray-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "50-shades-of-gray-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 		E6197B6917A869120084F18F = {
 			isa = PBXGroup;
 			children = (
+				E6C3390D17A86F1E006DF149 /* 50-shades-of-gray-icon.png */,
 				E6197B7B17A869120084F18F /* 50 Shades of Gray */,
 				E6197B7417A869120084F18F /* Frameworks */,
 				E6197B7317A869120084F18F /* Products */,
@@ -95,6 +101,8 @@
 				E6197B8E17A869120084F18F /* ShadesOfGreyRootViewController.m */,
 				E6197B9017A869120084F18F /* ShadesOfGreyDataViewController.h */,
 				E6197B9117A869120084F18F /* ShadesOfGreyDataViewController.m */,
+				E6C3390A17A86C6F006DF149 /* hexHolor.h */,
+				E6C3390B17A86C6F006DF149 /* hexHolor.m */,
 				E6197B9317A869120084F18F /* ShadesOfGreyModelController.h */,
 				E6197B9417A869120084F18F /* ShadesOfGreyModelController.m */,
 				E6197B9617A869120084F18F /* MainStoryboard.storyboard */,
@@ -174,6 +182,7 @@
 				E6197B8A17A869120084F18F /* Default@2x.png in Resources */,
 				E6197B8C17A869120084F18F /* Default-568h@2x.png in Resources */,
 				E6197B9817A869120084F18F /* MainStoryboard.storyboard in Resources */,
+				E6C3390E17A86F1E006DF149 /* 50-shades-of-gray-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +198,7 @@
 				E6197B8F17A869120084F18F /* ShadesOfGreyRootViewController.m in Sources */,
 				E6197B9217A869120084F18F /* ShadesOfGreyDataViewController.m in Sources */,
 				E6197B9517A869120084F18F /* ShadesOfGreyModelController.m in Sources */,
+				E6C3390C17A86C6F006DF149 /* hexHolor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

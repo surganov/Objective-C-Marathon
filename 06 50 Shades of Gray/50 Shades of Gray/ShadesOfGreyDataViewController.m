@@ -7,6 +7,7 @@
 //
 
 #import "ShadesOfGreyDataViewController.h"
+#import "hexHolor.h"
 
 @interface ShadesOfGreyDataViewController ()
 
@@ -29,7 +30,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.paper.backgroundColor = [UIColor grayColor];
+	self.paper.backgroundColor = [UIColor colorWithWhite:(CGFloat)arc4random_uniform(256)/256. alpha:1];
+//    self.paper.backgroundColor = [UIColor colorWithHex:(NSUInteger)@0xD9D9D9];
 }
 
 @end
