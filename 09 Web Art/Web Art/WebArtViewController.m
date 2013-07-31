@@ -18,10 +18,14 @@
 {
     [super viewDidLoad];
 
-	UIWebView *myWebView=[[UIWebView alloc] initWithFrame:CGRectMake(64, 38, 194, 226)];
-	[self.view addSubview:myWebView];
-	myWebView.scalesPageToFit = YES;
-	[myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.newrafael.com/websites"]]];
+	self.myWebView = [[UIWebView alloc] initWithFrame:CGRectMake(64, 38, 194, 226)];
+	[self.view addSubview:self.myWebView];
+	self.myWebView.scalesPageToFit = YES;
+	[self.myWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.newrafael.com/websites"]]];
 }
 
+- (IBAction)tapRecognized:(id)sender {
+	NSLog(@"tapped");
+	[self.myWebView goBack];
+}
 @end

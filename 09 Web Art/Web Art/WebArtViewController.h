@@ -10,4 +10,7 @@
 
 @interface WebArtViewController : UIViewController
 
+@property (nonatomic, strong) UIWebView *myWebView;
+- (IBAction)tapRecognized:(id)sender;
+
 @end
