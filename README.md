@@ -38,6 +38,8 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 8. Never Sorry
 *What I learned:* how to compose picture and video input into augemented reality.
 
+#### 9. Web Art
+*What I learned:* creating subviews in two ways: via storyboard & via code, handling tap gestures via storyboard, optimizing layout for both iPhone 4 and iPhone 5, making public properties for subviews to access them in gesture recognzied method
 
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
