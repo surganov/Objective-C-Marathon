@@ -35,6 +35,9 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 7. Inside iPhone
 *What I learned:* how to make app without writing any line of code at all.
 
+#### 8. Never Sorry
+*What I learned:* how to compose picture and video input into augemented reality.
+
 
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
