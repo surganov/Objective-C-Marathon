@@ -11,13 +11,23 @@
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="ltS-Zn-ODu"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ltS-Zn-ODu" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="hMP-6u-Yf2"/>
+                            <constraint firstItem="ltS-Zn-ODu" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="hte-1n-ejO"/>
+                            <constraint firstItem="ltS-Zn-ODu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kLl-PK-F2A"/>
+                            <constraint firstAttribute="trailing" secondItem="ltS-Zn-ODu" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tmh-eS-t6M"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a4f-PK-QxZ"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <segue destination="bkp-3K-EIg" kind="modal" identifier="rotation" id="Psb-8O-PTB"/>
+                        <outlet property="displayPokemon" destination="ltS-Zn-ODu" id="hWu-is-gQj"/>
+                        <segue destination="bkp-3K-EIg" kind="modal" identifier="rotation" modalTransitionStyle="flipHorizontal" id="Psb-8O-PTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -33,18 +43,26 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-m0-Fci">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="282" id="CkF-8g-eOD"/>
-                                    <constraint firstAttribute="height" constant="143" id="bJG-6c-e8v"/>
+                                    <constraint firstAttribute="width" constant="455" id="Aea-Yx-Tna"/>
+                                    <constraint firstAttribute="height" constant="86" id="ymu-g1-D02"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="Marion-Regular" family="Marion" pointSize="60"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="v8s-ru-Io3">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="F9d-In-P8l"/>
+                                    <constraint firstAttribute="height" constant="149" id="rBb-Gz-Q82"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0Oh-m0-Fci" firstAttribute="centerX" secondItem="ny9-6U-VkD" secondAttribute="centerX" type="default" id="6LI-4N-3af"/>
-                            <constraint firstItem="0Oh-m0-Fci" firstAttribute="top" secondItem="ny9-6U-VkD" secondAttribute="top" constant="88" id="HXp-X5-51k"/>
+                            <constraint firstItem="v8s-ru-Io3" firstAttribute="top" secondItem="ny9-6U-VkD" secondAttribute="top" constant="49" id="4z1-EU-Ekc"/>
+                            <constraint firstAttribute="bottom" secondItem="0Oh-m0-Fci" secondAttribute="bottom" constant="8" id="IST-UW-7nz"/>
+                            <constraint firstItem="v8s-ru-Io3" firstAttribute="centerX" secondItem="0Oh-m0-Fci" secondAttribute="centerX" type="default" id="Rte-t5-7f8"/>
+                            <constraint firstItem="0Oh-m0-Fci" firstAttribute="centerX" secondItem="ny9-6U-VkD" secondAttribute="centerX" type="default" id="h2c-8Z-kB1"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -52,7 +70,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="answerLabel" destination="0Oh-m0-Fci" id="tX1-0p-aH0"/>
-                        <segue destination="2" kind="modal" identifier="rotateBack" id="ngn-zg-879"/>
+                        <outlet property="displayPokemon" destination="v8s-ru-Io3" id="J08-c4-REg"/>
+                        <segue destination="2" kind="modal" identifier="rotateBack" modalTransitionStyle="crossDissolve" id="ngn-zg-879"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mbk-lW-04k" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,6 +79,24 @@
             <point key="canvasLocation" x="949" y="439"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AnswerViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AnswerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="answerLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="displayPokemon" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PokemonViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PokemonViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="displayPokemon" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

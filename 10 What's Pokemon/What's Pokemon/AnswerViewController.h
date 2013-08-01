@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *answer;
 @property (weak, nonatomic) IBOutlet UILabel *answerLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *displayPokemon;
 
 @end

@@ -35,6 +35,7 @@
 		E6C2AAFA17AACB3E00F5C72A /* totodile.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C2AAEC17AACB3E00F5C72A /* totodile.png */; };
 		E6C2AAFB17AACB3E00F5C72A /* turtwig.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C2AAED17AACB3E00F5C72A /* turtwig.png */; };
 		E6C2AAFE17AADD1500F5C72A /* NSArray+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = E6C2AAFD17AADD1500F5C72A /* NSArray+Random.m */; };
+		E6C2AB0017AAEE9800F5C72A /* pokemon-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6C2AAFF17AAEE9800F5C72A /* pokemon-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		E6C2AAED17AACB3E00F5C72A /* turtwig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turtwig.png; sourceTree = "<group>"; };
 		E6C2AAFC17AADD1500F5C72A /* NSArray+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Random.h"; sourceTree = "<group>"; };
 		E6C2AAFD17AADD1500F5C72A /* NSArray+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Random.m"; sourceTree = "<group>"; };
+		E6C2AAFF17AAEE9800F5C72A /* pokemon-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pokemon-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		E67003E117A95D8100DD70C1 = {
 			isa = PBXGroup;
 			children = (
+				E6C2AAFF17AAEE9800F5C72A /* pokemon-icon.png */,
 				E6C2AADF17AACB3E00F5C72A /* assets */,
 				E67003F317A95D8100DD70C1 /* What's Pokemon */,
 				E67003EC17A95D8100DD70C1 /* Frameworks */,
@@ -242,6 +245,7 @@
 				E6C2AAF917AACB3E00F5C72A /* tepig.png in Resources */,
 				E6C2AAFA17AACB3E00F5C72A /* totodile.png in Resources */,
 				E6C2AAFB17AACB3E00F5C72A /* turtwig.png in Resources */,
+				E6C2AB0017AAEE9800F5C72A /* pokemon-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

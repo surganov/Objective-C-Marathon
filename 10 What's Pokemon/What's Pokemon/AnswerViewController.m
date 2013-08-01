@@ -29,6 +29,8 @@
     [super viewDidLoad];
 	
 	self.answerLabel.text = self.answer;
+	[self.displayPokemon setImage:[UIImage imageNamed:
+								   [NSString stringWithFormat:@"%@.png",self.answer]]];
 	
 }
 

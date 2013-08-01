@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PokemonViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *displayPokemon;
 
 @end

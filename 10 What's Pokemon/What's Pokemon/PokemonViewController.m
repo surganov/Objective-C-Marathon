@@ -25,10 +25,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
+		
 	self.pokemonFiles = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokemonsFiles" ofType:@"plist"]];
-	self.answer = self.randomPokemon;
-	NSLog(@"%@",self.answer);
+	
+	NSString *question = self.randomPokemon;
+	self.answer = [[[question componentsSeparatedByString:@"."] objectAtIndex:0] capitalizedString];
+
+	[self.displayPokemon setImage:[UIImage imageNamed:question]];
 }
 
 - (NSString *)randomPokemon
