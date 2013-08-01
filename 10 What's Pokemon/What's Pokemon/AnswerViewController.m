@@ -28,10 +28,8 @@
 {
     [super viewDidLoad];
 	
-	self.answerLabel.text = self.answer;
-	[self.displayPokemon setImage:[UIImage imageNamed:
-								   [NSString stringWithFormat:@"%@.png",self.answer]]];
-	
+	self.answerLabel.text = [[[self.answer componentsSeparatedByString:@"."] objectAtIndex:0] capitalizedString];
+	[self.displayPokemon setImage:[UIImage imageNamed:self.answer]];
 }
 
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration

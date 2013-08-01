@@ -29,7 +29,7 @@
 	self.pokemonFiles = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"pokemonsFiles" ofType:@"plist"]];
 	
 	NSString *question = self.randomPokemon;
-	self.answer = [[[question componentsSeparatedByString:@"."] objectAtIndex:0] capitalizedString];
+	self.answer = question;
 
 	[self.displayPokemon setImage:[UIImage imageNamed:question]];
 }
