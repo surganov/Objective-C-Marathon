@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>bulbasaur.png</string>
+	<string>chespin.png</string>
+	<string>chikorita.png</string>
+	<string>chimchar.png</string>
+	<string>cyndaquil.png</string>
+	<string>fennekin.png</string>
+	<string>froakie.png</string>
+	<string>oshawott.png</string>
+	<string>piplup.png</string>
+	<string>snivy.png</string>
+	<string>squirtle.png</string>
+	<string>tepig.png</string>
+	<string>totodile.png</string>
+	<string>turtwig.png</string>
+</array>
+</plist>
