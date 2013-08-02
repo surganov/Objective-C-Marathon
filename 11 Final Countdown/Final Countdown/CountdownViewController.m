@@ -18,8 +18,12 @@
 {
     [super viewDidLoad];
 	
-	// get current time
-	// assign time to display
+	NSDate *currentDate = [NSDate date];
+	self.display.text = [currentDate description];
+	
+	// calculate time to Sochi 2014
+	// it's March 7 2014
+	
 }
 
 
