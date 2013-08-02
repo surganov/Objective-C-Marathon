@@ -44,6 +44,9 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 10. What's Pokemon
 *What I learned:* creating multiple viewcontrollers, passing data between them via segues, making custom launchscreen, parsing NSString objects, getting data from property list
 
+#### 11. Final Countdown
+*What I learned:* working with NSTimer, NSDate, NSCalendar, NSDateComponents, NSDateFormatter
+
 
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
@@ -53,7 +56,6 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 5. UIGestureRecognizer and all possible gestures in iOS
 6. Frame animation
 7. Scroll views
-8. Work with time
 
 ## Contribution
 Feel free to pull requests to my code.
