@@ -26,15 +26,33 @@
 	[sochiDateComponents setDay:7];
 	NSDate *sochiDate = [calendar dateFromComponents:sochiDateComponents];
 	
-	//calculate difference between local date and Sochi date
+	
+	self.remainingTime = [sochiDate timeIntervalSinceNow];
+	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerTick:) userInfo:nil repeats:YES];
+
+}
+
+- (void)timerTick:(NSTimer *)timer
+{
+	self.remainingTime -= 1;
+	NSDate *countdown = [NSDate dateWithTimeIntervalSinceReferenceDate:self.remainingTime];
+	
 	NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
 	[formatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+	
 	[formatter setDateFormat:@"DD"];
+	NSString *days = [formatter stringFromDate:countdown];
+	[formatter setDateFormat:@"hh"];
+	NSString *hours = [formatter stringFromDate:countdown];
+	[formatter setDateFormat:@"mm"];
+	NSString *minutes = [formatter stringFromDate:countdown];
+	[formatter setDateFormat:@"ss"];
+	NSString *seconds = [formatter stringFromDate:countdown];
 	
-	NSTimeInterval remainingTime = [sochiDate timeIntervalSinceNow];
-	NSDate *countdown = [NSDate dateWithTimeIntervalSinceReferenceDate:remainingTime];
+	self.display.text = [NSString stringWithFormat:@"%@ days, %@ hours, %@ minutes, %@ seconds to the XXII Olympic Winter Games",
+						 days, hours, minutes, seconds];
 	
-	self.display.text = [NSString stringWithFormat:@"%@ days\nto Sochi 2014",[formatter stringFromDate:countdown]];
+//	self.display.text = [NSString stringWithFormat:@"%@\nto Sochi 2014",[formatter stringFromDate:countdown]];
 }
 
 

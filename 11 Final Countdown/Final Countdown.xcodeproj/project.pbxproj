@@ -18,6 +18,8 @@
 		E6B7F76E17AC1A580018E2F7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B7F76D17AC1A580018E2F7 /* Default-568h@2x.png */; };
 		E6B7F77117AC1A580018E2F7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6B7F76F17AC1A580018E2F7 /* MainStoryboard.storyboard */; };
 		E6B7F77417AC1A580018E2F7 /* CountdownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B7F77317AC1A580018E2F7 /* CountdownViewController.m */; };
+		E6B7F77B17AC3C060018E2F7 /* 9858ab0601fad43bec3daa54c22309f5.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E6B7F77A17AC3C060018E2F7 /* 9858ab0601fad43bec3daa54c22309f5.JPG */; };
+		E6B7F77D17AC3FFE0018E2F7 /* sochi-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6B7F77C17AC3FFE0018E2F7 /* sochi-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		E6B7F77017AC1A580018E2F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E6B7F77217AC1A580018E2F7 /* CountdownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountdownViewController.h; sourceTree = "<group>"; };
 		E6B7F77317AC1A580018E2F7 /* CountdownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownViewController.m; sourceTree = "<group>"; };
+		E6B7F77A17AC3C060018E2F7 /* 9858ab0601fad43bec3daa54c22309f5.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9858ab0601fad43bec3daa54c22309f5.JPG; sourceTree = "<group>"; };
+		E6B7F77C17AC3FFE0018E2F7 /* sochi-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sochi-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		E6B7F74B17AC1A580018E2F7 = {
 			isa = PBXGroup;
 			children = (
+				E6B7F77C17AC3FFE0018E2F7 /* sochi-icon.png */,
+				E6B7F77A17AC3C060018E2F7 /* 9858ab0601fad43bec3daa54c22309f5.JPG */,
 				E6B7F75D17AC1A580018E2F7 /* Final Countdown */,
 				E6B7F75617AC1A580018E2F7 /* Frameworks */,
 				E6B7F75517AC1A580018E2F7 /* Products */,
@@ -164,6 +170,8 @@
 				E6B7F76C17AC1A580018E2F7 /* Default@2x.png in Resources */,
 				E6B7F76E17AC1A580018E2F7 /* Default-568h@2x.png in Resources */,
 				E6B7F77117AC1A580018E2F7 /* MainStoryboard.storyboard in Resources */,
+				E6B7F77B17AC3C060018E2F7 /* 9858ab0601fad43bec3daa54c22309f5.JPG in Resources */,
+				E6B7F77D17AC3FFE0018E2F7 /* sochi-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +307,7 @@
 				E6B7F77917AC1A580018E2F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

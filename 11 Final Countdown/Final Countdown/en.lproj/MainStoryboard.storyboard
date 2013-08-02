@@ -12,20 +12,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="415" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-3v-cOV">
+                            <imageView userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="center" image="9858ab0601fad43bec3daa54c22309f5.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="H10-XJ-Btb"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="%@ days, %@ hours,\n%@ minutes, %@ seconds\nto the XXII Olympic Winter Games" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="441" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-3v-cOV">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="415" id="RfN-Ej-The"/>
-                                    <constraint firstAttribute="height" constant="139" id="Rwn-bL-Kw1"/>
+                                    <constraint firstAttribute="height" constant="157" id="kpg-JF-LnH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="SOCHI 2014 FINAL COUNTDOWN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1L-xm-8M1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="EGi-rt-kfj"/>
+                                    <constraint firstAttribute="width" constant="408" id="oLR-yL-dac"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldItalicMT" family="Times New Roman" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XHV-3v-cOV" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="3gJ-ef-DUL"/>
-                            <constraint firstItem="XHV-3v-cOV" firstAttribute="top" secondItem="3" secondAttribute="top" constant="61" id="exp-Oy-5UL"/>
+                            <constraint firstItem="H10-XJ-Btb" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="NHm-hX-iSk"/>
+                            <constraint firstItem="XHV-3v-cOV" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="NJu-ga-Q38"/>
+                            <constraint firstItem="H10-XJ-Btb" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="NeM-5F-S4g"/>
+                            <constraint firstItem="H10-XJ-Btb" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="V7k-ju-jvx"/>
+                            <constraint firstItem="E1L-xm-8M1" firstAttribute="centerX" secondItem="H10-XJ-Btb" secondAttribute="centerX" type="default" id="Vfl-vU-TTt"/>
+                            <constraint firstItem="H10-XJ-Btb" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="VzS-xf-H11"/>
+                            <constraint firstItem="E1L-xm-8M1" firstAttribute="centerX" secondItem="XHV-3v-cOV" secondAttribute="centerX" type="default" id="WSb-4H-CxP"/>
+                            <constraint firstItem="E1L-xm-8M1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="43" id="XGB-Az-Kat"/>
+                            <constraint firstItem="XHV-3v-cOV" firstAttribute="top" secondItem="E1L-xm-8M1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jgV-UU-vwM"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
@@ -41,6 +57,20 @@
             <point key="canvasLocation" x="218" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="9858ab0601fad43bec3daa54c22309f5.JPG" width="600" height="360"/>
+    </resources>
+    <classes>
+        <class className="CountdownViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CountdownViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="display" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

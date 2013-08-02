@@ -11,5 +11,6 @@
 @interface CountdownViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (nonatomic) NSTimeInterval remainingTime;
 
 @end
