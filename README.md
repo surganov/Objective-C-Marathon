@@ -41,7 +41,7 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 9. Web Art
 *What I learned:* creating subviews in two ways: via storyboard & via code, handling tap gestures via storyboard, optimizing layout for both iPhone 4 and iPhone 5, making public properties for subviews to access them in gesture recognzied method
 
-#### 9. What's Pokemon
+#### 10. What's Pokemon
 *What I learned:* creating multiple viewcontrollers, passing data between them via segues, making custom launchscreen, parsing NSString objects, getting data from property list
 
 
