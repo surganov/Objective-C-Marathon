@@ -19,10 +19,17 @@
     [super viewDidLoad];
 	
 	NSDate *currentDate = [NSDate date];
-	self.display.text = [currentDate description];
+//	self.display.text = [currentDate description];
 	
-	// calculate time to Sochi 2014
-	// it's March 7 2014
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	[calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+	NSDateComponents *sochiDateComponents = [[NSDateComponents alloc] init];
+	[sochiDateComponents setYear:2014];
+	[sochiDateComponents setMonth:3];
+	[sochiDateComponents setDay:7];
+	NSDate *sochiDate = [calendar dateFromComponents:sochiDateComponents];
+	
+	self.display.text = [sochiDate description];
 	
 }
 
