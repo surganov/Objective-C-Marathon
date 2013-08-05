@@ -47,6 +47,8 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 11. Final Countdown
 *What I learned:* working with NSTimer, NSDate, NSCalendar, NSDateComponents, NSDateFormatter
 
+#### 12. Mickey Clock
+*What I learned:* working with CALayers, rotation, gradients, sublayers, animations, anchor points.
 
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
