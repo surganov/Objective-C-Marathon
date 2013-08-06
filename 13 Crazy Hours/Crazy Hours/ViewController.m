@@ -31,17 +31,12 @@
 	return _minutes;
 }
 
-- (NSInteger)seconds
+- (void) setCurrentSeconds
 {
-	if (!_seconds) {
-		NSDate *now = [NSDate new];
-		NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-		
-		//		[calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-		NSDateComponents *dateComponents = [calendar components:(NSSecondCalendarUnit) fromDate:now];
-		_seconds = [dateComponents second];
-	}
-	return _seconds;
+	NSDate *now = [NSDate new];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *dateComponents = [calendar components:(NSSecondCalendarUnit) fromDate:now];
+	self.seconds = [dateComponents second];
 }
 
 - (void)viewDidLoad
@@ -49,6 +44,7 @@
     [super viewDidLoad];
 	[self setBackground];
 	[self setMinuteHand:self.minuteHand atMinutes:self.minutes];
+	[self setCurrentSeconds];
 	[self setSecondsHand:self.secondsHand atSeconds:self.seconds];
 
 	NSLog(@"%i", self.seconds);
@@ -143,11 +139,22 @@
 	myAnimation.fromValue = rotationAtStart;
 	myAnimation.toValue = [NSNumber numberWithFloat:([rotationAtStart floatValue] + angle)];
 	[self.secondsHand addAnimation:myAnimation forKey:@"transform.rotation"];
+	
+	self.seconds++;
+	if (self.seconds == 60) {
+		self.seconds = 0;
+	}
+	NSLog(@"%i",self.seconds);
 }
 
 - (void) tick:(NSTimer *)timer
 {
 	[self rotateSeconds];
+	if (self.seconds == 0) {
+		[self rotateMinute];
+	}
+//	NSLog(@"%f",(59*6)/180*M_PI);
+//	NSLog(@"%@",(NSNumber*)[self.secondsHand valueForKeyPath:@"transform.rotation"]);
 }
 
 @end
