@@ -29,7 +29,12 @@
 
 - (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
 {
-	NSLog(@"%f",gesture.rotation);
+	CGFloat rotationDegree = gesture.rotation * 180.0 / M_PI;
+	NSLog(@"%f", rotationDegree);
+	
+	[self rotateClockHand:self.minuteHand atDegree:rotationDegree/50 during:0];
+//	[self rotateClockHand:self.minuteHand atDegree:-1 during:0];
+	
 }
 
 
@@ -58,13 +63,11 @@
 		self.seconds = 0;
 	}
 
-	NSLog(@"%i",self.seconds);
+//	NSLog(@"%i",self.seconds);
 	
 	if (self.seconds == 0) {
 		[self rotateClockHand:self.minuteHand atDegree:6 during:0.1];
 	}
-	//	NSLog(@"%f",(59*6)/180*M_PI);
-	//	NSLog(@"%@",(NSNumber*)[self.secondsHand valueForKeyPath:@"transform.rotation"]);
 }
 
 - (void)setBackground
