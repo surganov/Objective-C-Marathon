@@ -39,9 +39,12 @@
 	[self setBackground];
 	
 	self.minutes = [ClockModel currentMinutes];
-	[self setMinuteHand:self.minuteHand atMinutes:self.minutes];
+	self.minuteHand = [self createClockHandWithSize:CGPointMake(10, 100) WithColor:[UIColor redColor] AtTime:self.minutes];
+	[self.view.layer addSublayer:self.minuteHand];
+	
 	self.seconds = [ClockModel currentSeconds];
-	[self setSecondsHand:self.secondsHand atSeconds:self.seconds];
+	self.secondsHand = [self createClockHandWithSize:CGPointMake(8, 130) WithColor:[UIColor blackColor] AtTime:self.seconds];
+	[self.view.layer addSublayer:self.secondsHand];
 
 	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
 }
@@ -75,46 +78,25 @@
 	[self.view.layer addSublayer:bgGradient];
 }
 
-- (void)setMinuteHand:(CALayer *)minuteHand atMinutes:(NSInteger)minutes
+- (CALayer *)createClockHandWithSize:(CGPoint)size WithColor:(UIColor*)color AtTime:(NSInteger)time
 {
-	self.minuteHand = [CALayer layer];
-	self.minuteHand.backgroundColor = [UIColor redColor].CGColor;
-	self.minuteHand.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
+	CALayer *clockHand = [CALayer layer];
+	clockHand.backgroundColor = color.CGColor;
+	clockHand.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
 	
 	CGPoint centerPoint = self.view.center;
-	self.minuteHand.frame = CGRectMake(centerPoint.x, centerPoint.y, 10, 140);
-	self.minuteHand.anchorPoint = CGPointMake(0.5, 0);
-	self.minuteHand.position = CGPointMake(self.minuteHand.position.x-self.minuteHand.frame.size.width/2,
-										   self.minuteHand.position.y-self.minuteHand.frame.size.height/2);
-	
-	// set minute hand at 0 point
-	self.minuteHand.transform = CATransform3DMakeRotation(180.0 / 180.0 * M_PI, 0.0, 0.0, 1.0);
-	
-	// set current time to minute hand
-	self.minuteHand.transform = CATransform3DMakeRotation((minutes * 6 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
-	
-	[self.view.layer addSublayer:self.minuteHand];
-}
-
-- (void)setSecondsHand:(CALayer *)secondsHand atSeconds:(NSInteger)seconds
-{
-	self.secondsHand = [CALayer layer];
-	self.secondsHand.backgroundColor = [UIColor blackColor].CGColor;
-	self.secondsHand.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
-	
-	CGPoint centerPoint = self.view.center;
-	self.secondsHand.frame = CGRectMake(centerPoint.x, centerPoint.y, 5, 170);
-	self.secondsHand.anchorPoint = CGPointMake(0.5, 0);
-	self.secondsHand.position = CGPointMake(self.secondsHand.position.x-self.secondsHand.frame.size.width/2,
-										   self.secondsHand.position.y-self.secondsHand.frame.size.height/2);
+	clockHand.frame = CGRectMake(centerPoint.x, centerPoint.y, size.x, size.y);
+	clockHand.anchorPoint = CGPointMake(0.5, 0);
+	clockHand.position = CGPointMake(clockHand.position.x-clockHand.frame.size.width/2,
+									 clockHand.position.y-clockHand.frame.size.height/2);
 	
 	// set seconds hand at 0 point
-	self.secondsHand.transform = CATransform3DMakeRotation(180.0 / 180.0 * M_PI, 0.0, 0.0, 1.0);
+	clockHand.transform = CATransform3DMakeRotation(180.0 / 180.0 * M_PI, 0.0, 0.0, 1.0);
 	
 	// set seconds time to minute hand
-	self.secondsHand.transform = CATransform3DMakeRotation((seconds * 6 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
+	clockHand.transform = CATransform3DMakeRotation((time * 6 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
 	
-	[self.view.layer addSublayer:self.secondsHand];
+	return clockHand;
 }
 
 - (void)rotateClockHand:(CALayer*)clockHand atDegree:(CGFloat)angle during:(CFTimeInterval)seconds
