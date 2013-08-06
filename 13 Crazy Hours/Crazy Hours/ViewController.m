@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ClockModel.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) CALayer *minuteHand;
@@ -18,43 +19,41 @@
 
 @implementation ViewController
 
-- (NSInteger)minutes
+{}
+
+#pragma mark - Gestures
+- (IBAction)singleTap:(id)sender
 {
-	if (!_minutes) {
-		NSDate *now = [NSDate new];
-		NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-		
-//		[calendar setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-		NSDateComponents *dateComponents = [calendar components:(NSMinuteCalendarUnit) fromDate:now];
-		_minutes = [dateComponents minute];
-	}
-	return _minutes;
+	[self tick:nil];
 }
 
-- (void) setCurrentSeconds
+- (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
 {
-	NSDate *now = [NSDate new];
-	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-	NSDateComponents *dateComponents = [calendar components:(NSSecondCalendarUnit) fromDate:now];
-	self.seconds = [dateComponents second];
+	NSLog(@"%f",gesture.rotation);
 }
 
+
+#pragma mark - Setting the view
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
 	[self setBackground];
+	
+	self.minutes = [ClockModel currentMinutes];
 	[self setMinuteHand:self.minuteHand atMinutes:self.minutes];
-	[self setCurrentSeconds];
+	self.seconds = [ClockModel currentSeconds];
 	[self setSecondsHand:self.secondsHand atSeconds:self.seconds];
 
-	NSLog(@"%i", self.seconds);
-	[self setTimer];
-
+	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
 }
 
-- (void)setTimer
+- (void) tick:(NSTimer *)timer
 {
-	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+	[self rotateSeconds];
+	if (self.seconds == 0) {
+		[self rotateMinute];
+	}
+	//	NSLog(@"%f",(59*6)/180*M_PI);
+	//	NSLog(@"%@",(NSNumber*)[self.secondsHand valueForKeyPath:@"transform.rotation"]);
 }
 
 - (void)setBackground
@@ -110,11 +109,6 @@
 	[self.view.layer addSublayer:self.secondsHand];
 }
 
-- (IBAction)singleTap:(id)sender
-{
-	[self tick:nil];
-}
-
 - (void) rotateMinute
 {
 	CGFloat angle = 6 / 180.0 * M_PI;
@@ -145,16 +139,6 @@
 		self.seconds = 0;
 	}
 	NSLog(@"%i",self.seconds);
-}
-
-- (void) tick:(NSTimer *)timer
-{
-	[self rotateSeconds];
-	if (self.seconds == 0) {
-		[self rotateMinute];
-	}
-//	NSLog(@"%f",(59*6)/180*M_PI);
-//	NSLog(@"%@",(NSNumber*)[self.secondsHand valueForKeyPath:@"transform.rotation"]);
 }
 
 @end
