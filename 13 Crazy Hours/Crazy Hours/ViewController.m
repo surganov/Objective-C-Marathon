@@ -48,9 +48,17 @@
 
 - (void) tick:(NSTimer *)timer
 {
-	[self rotateSeconds];
+	[self rotateClockHand:self.secondsHand atDegree:6 during:0.1];
+
+	self.seconds++;
+	if (self.seconds == 60) {
+		self.seconds = 0;
+	}
+
+	NSLog(@"%i",self.seconds);
+	
 	if (self.seconds == 0) {
-		[self rotateMinute];
+		[self rotateClockHand:self.minuteHand atDegree:6 during:0.1];
 	}
 	//	NSLog(@"%f",(59*6)/180*M_PI);
 	//	NSLog(@"%@",(NSNumber*)[self.secondsHand valueForKeyPath:@"transform.rotation"]);
@@ -109,36 +117,20 @@
 	[self.view.layer addSublayer:self.secondsHand];
 }
 
-- (void) rotateMinute
+- (void)rotateClockHand:(CALayer*)clockHand atDegree:(CGFloat)angle during:(CFTimeInterval)seconds
 {
-	CGFloat angle = 6 / 180.0 * M_PI;
-	NSNumber *rotationAtStart = [self.minuteHand valueForKeyPath:@"transform.rotation"];
-	CATransform3D myRotationTransform = CATransform3DRotate(self.minuteHand.transform, angle, 0.0, 0.0, 1.0);
-	self.minuteHand.transform = myRotationTransform;
-	CABasicAnimation *myAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-	myAnimation.duration = 0.1;
-	myAnimation.fromValue = rotationAtStart;
-	myAnimation.toValue = [NSNumber numberWithFloat:([rotationAtStart floatValue] + angle)];
-	[self.minuteHand addAnimation:myAnimation forKey:@"transform.rotation"];
-}
-
-- (void) rotateSeconds
-{
-	CGFloat angle = 6 / 180.0 * M_PI;
-	NSNumber *rotationAtStart = [self.secondsHand valueForKeyPath:@"transform.rotation"];
-	CATransform3D myRotationTransform = CATransform3DRotate(self.secondsHand.transform, angle, 0.0, 0.0, 1.0);
-	self.secondsHand.transform = myRotationTransform;
-	CABasicAnimation *myAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
-	myAnimation.duration = 0.1;
-	myAnimation.fromValue = rotationAtStart;
-	myAnimation.toValue = [NSNumber numberWithFloat:([rotationAtStart floatValue] + angle)];
-	[self.secondsHand addAnimation:myAnimation forKey:@"transform.rotation"];
+	// convert degrees to radians
+	angle = angle / 180.0 * M_PI;
 	
-	self.seconds++;
-	if (self.seconds == 60) {
-		self.seconds = 0;
-	}
-	NSLog(@"%i",self.seconds);
+	// perform rotation
+	NSNumber *rotationAtStart = [clockHand valueForKeyPath:@"transform.rotation"];
+	CATransform3D myRotationTransform = CATransform3DRotate(clockHand.transform, angle, 0.0, 0.0, 1.0);
+	clockHand.transform = myRotationTransform;
+	CABasicAnimation *myAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+	myAnimation.duration = seconds;
+	myAnimation.fromValue = rotationAtStart;
+	myAnimation.toValue = [NSNumber numberWithFloat:([rotationAtStart floatValue] + angle)];
+	[clockHand addAnimation:myAnimation forKey:@"transform.rotation"];
 }
 
 @end
