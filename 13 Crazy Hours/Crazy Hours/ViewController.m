@@ -40,8 +40,9 @@
 
 - (void)setMinutes:(NSInteger)minutes
 {
-	if (minutes > 60) {
+	if (minutes >= 60) {
 		_minutes = minutes % 60;
+		self.hours++;
 	} else if (minutes == 60) {
 		_minutes = minutes;
 		self.hours++;
@@ -112,12 +113,12 @@
 	self.hourHand = [self createClockHandWithSize:CGPointMake(10, 80) WithColor:[UIColor grayColor] AtTime:self.hours];
 	[self.view.layer addSublayer:self.hourHand];
 
-	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+	[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
 }
 
 - (void) tick:(NSTimer *)timer
 {
-	self.seconds++;
+	self.minutes += 1;
 //	if (self.seconds == 60) {
 //		self.seconds = 0;
 //	}
