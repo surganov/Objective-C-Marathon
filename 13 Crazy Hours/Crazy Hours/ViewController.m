@@ -29,11 +29,20 @@
 
 - (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
 {
-	CGFloat rotationDegree = gesture.rotation * 180.0 / M_PI;
-	NSLog(@"%f", rotationDegree);
+	CGFloat _lastRotation = 0.0;
 	
-	[self rotateClockHand:self.minuteHand atDegree:rotationDegree/50 during:0];
-//	[self rotateClockHand:self.minuteHand atDegree:-1 during:0];
+    if([(UIRotationGestureRecognizer*)gesture state] == UIGestureRecognizerStateEnded) {
+		
+		_lastRotation = 0.0;
+		return;
+    }
+	
+    CGFloat rotation = 0.0 - (_lastRotation - [(UIRotationGestureRecognizer*)gesture rotation]);
+	NSLog(@"%f",rotation);
+	
+	self.minuteHand.transform = CATransform3DMakeRotation(rotation*1.5, 0.0, 0.0, 1.0);
+	
+    _lastRotation = [(UIRotationGestureRecognizer*)gesture rotation];
 	
 }
 
