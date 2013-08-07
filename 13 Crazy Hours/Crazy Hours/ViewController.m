@@ -68,7 +68,10 @@
 #pragma mark - Gestures
 - (IBAction)singleTap:(id)sender
 {
-	self.seconds++;
+	if (self.minutes < 55) {
+		self.minutes = 55;
+	}
+	self.minutes++;
 }
 
 - (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
