@@ -96,7 +96,11 @@
 #pragma mark - Setting the view
 - (void)viewDidLoad
 {
-	[self setBackground];
+//	[self setBackground];
+	CALayer *bg = [CALayer layer];
+	bg.frame = self.view.frame;
+	bg.contents = (id) [UIImage imageNamed:@"crazy-hours-bg.png"].CGImage;
+	[self.view.layer addSublayer:bg];
 	
 	self.seconds = [ClockModel currentSeconds];
 	

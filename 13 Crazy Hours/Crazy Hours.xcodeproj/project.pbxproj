@@ -20,6 +20,7 @@
 		E634C44717B05F7000A61903 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E634C44617B05F7000A61903 /* ViewController.m */; };
 		E634C44E17B05F8F00A61903 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E634C44D17B05F8F00A61903 /* QuartzCore.framework */; };
 		E65FDFB617B187BC004846A8 /* ClockModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E65FDFB517B187BC004846A8 /* ClockModel.m */; };
+		E6F2506B17B3049600405C29 /* crazy-hours-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E6F2506A17B3049600405C29 /* crazy-hours-bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E634C44D17B05F8F00A61903 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E65FDFB417B187BC004846A8 /* ClockModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockModel.h; sourceTree = "<group>"; };
 		E65FDFB517B187BC004846A8 /* ClockModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockModel.m; sourceTree = "<group>"; };
+		E6F2506A17B3049600405C29 /* crazy-hours-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crazy-hours-bg.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		E634C41E17B05F7000A61903 = {
 			isa = PBXGroup;
 			children = (
+				E6F2506A17B3049600405C29 /* crazy-hours-bg.png */,
 				E634C43017B05F7000A61903 /* Crazy Hours */,
 				E634C42917B05F7000A61903 /* Frameworks */,
 				E634C42817B05F7000A61903 /* Products */,
@@ -172,6 +175,7 @@
 				E634C43F17B05F7000A61903 /* Default@2x.png in Resources */,
 				E634C44117B05F7000A61903 /* Default-568h@2x.png in Resources */,
 				E634C44417B05F7000A61903 /* MainStoryboard.storyboard in Resources */,
+				E6F2506B17B3049600405C29 /* crazy-hours-bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
