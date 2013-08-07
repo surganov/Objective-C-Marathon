@@ -50,6 +50,10 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 12. Mickey Clock
 *What I learned:* working with CALayers, rotation, gradients, sublayers, animations, anchor points.
 
+#### 13. Crazy Hours
+*What I learned:* that making a analog clock abstraction it's not easy task at all, there was a lot of refactoring and rewriting
+
+
 ## Wanna learn
 1. How to animate UIViews (especially transitions between them)
 2. Concepts of protocols and delegations
