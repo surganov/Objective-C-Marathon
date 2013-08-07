@@ -30,4 +30,14 @@
 	return [dateComponents minute];
 }
 
++ (NSInteger)currentHours
+{
+	NSDate *now = [NSDate new];
+	
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSDateComponents *dateComponents = [calendar components:(NSHourCalendarUnit) fromDate:now];
+	
+	return [dateComponents hour];
+}
+
 @end

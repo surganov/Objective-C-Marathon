@@ -11,8 +11,9 @@
 #import "ClockModel.h"
 
 @interface ViewController ()
+@property (nonatomic, weak) CALayer *hourHand;
 @property (nonatomic, weak) CALayer *minuteHand;
-@property (nonatomic, weak) CALayer *secondsHand;
+@property (nonatomic) NSInteger hours;
 @property (nonatomic) NSInteger minutes;
 @property (nonatomic) NSInteger seconds;
 @end
@@ -21,15 +22,61 @@
 
 {}
 
+- (void)setHours:(NSInteger)hours
+{
+	NSDictionary *crazyHours = @{@1:@7,@2:@12,@3:@5,@4:@10,@5:@3,@6:@8,@7:@1,@8:@6,@9:@11,@10:@4,@11:@9,@12:@2};
+	if (hours > 12) {
+		_hours = (int) (hours - 12);
+	} else if (hours < 0) {
+		_hours = (int) (12 + hours);
+	} else {
+		_hours = (int) (hours);
+	}
+	NSLog(@"hours:%i",_hours);
+	self.hourHand.transform = CATransform3DMakeRotation((_hours * 30 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
+}
+
+- (void)setMinutes:(NSInteger)minutes
+{
+	if (minutes % 60 == 60 || minutes % 60 == 0) {
+		_minutes = (int) (minutes - 60);
+		self.hours++;
+	} else if (minutes < 0) {
+		_minutes = (int) (60 + minutes);
+		self.hours--;
+	} else {
+		_minutes = (int) (minutes);
+	}
+	NSLog(@"minutes:%i",_minutes);
+	self.minuteHand.transform = CATransform3DMakeRotation((_minutes * 6 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
+}
+
+- (void)setSeconds:(NSInteger)seconds
+{
+	if (seconds >= 60) {
+		_seconds = (int) (seconds - 60);
+		self.minutes++;
+	} else if (seconds < 0) {
+		_seconds = (int) (60 + seconds);
+		self.minutes--;
+	} else {
+		_seconds = (int) (seconds);
+	}
+//	NSLog(@"%i",seconds);
+}
+
 #pragma mark - Gestures
 - (IBAction)singleTap:(id)sender
 {
-	[self tick:nil];
+	self.seconds++;
 }
 
 - (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
 {
-	self.minuteHand.transform = CATransform3DMakeRotation(gesture.rotation*1.5, 0.0, 0.0, 1.0);	
+//	self.minuteHand.transform = CATransform3DMakeRotation(gesture.rotation*1.5, 0.0, 0.0, 1.0);
+//	CGFloat minutes = gesture.rotation * 180.0 / M_PI / 6;
+//	NSLog(@"%f", minutes);
+	self.minutes = gesture.rotation * 180.0 / M_PI / 6;
 }
 
 
@@ -38,31 +85,25 @@
 {
 	[self setBackground];
 	
+	self.seconds = [ClockModel currentSeconds];
+	
 	self.minutes = [ClockModel currentMinutes];
 	self.minuteHand = [self createClockHandWithSize:CGPointMake(10, 100) WithColor:[UIColor redColor] AtTime:self.minutes];
 	[self.view.layer addSublayer:self.minuteHand];
 	
-	self.seconds = [ClockModel currentSeconds];
-	self.secondsHand = [self createClockHandWithSize:CGPointMake(8, 130) WithColor:[UIColor blackColor] AtTime:self.seconds];
-	[self.view.layer addSublayer:self.secondsHand];
+	self.hours = [ClockModel currentHours];
+	self.hourHand = [self createClockHandWithSize:CGPointMake(10, 80) WithColor:[UIColor blackColor] AtTime:self.hours];
+	[self.view.layer addSublayer:self.hourHand];
 
 	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
 }
 
 - (void) tick:(NSTimer *)timer
 {
-	[self rotateClockHand:self.secondsHand atDegree:6 during:0.1];
-
 	self.seconds++;
-	if (self.seconds == 60) {
-		self.seconds = 0;
-	}
-
-//	NSLog(@"%i",self.seconds);
-	
-	if (self.seconds == 0) {
-		[self rotateClockHand:self.minuteHand atDegree:6 during:0.1];
-	}
+//	if (self.seconds == 60) {
+//		self.seconds = 0;
+//	}
 }
 
 - (void)setBackground

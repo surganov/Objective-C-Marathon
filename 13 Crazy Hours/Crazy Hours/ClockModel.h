@@ -12,5 +12,6 @@
 
 + (NSInteger)currentSeconds;
 + (NSInteger)currentMinutes;
++ (NSInteger)currentHours;
 
 @end
