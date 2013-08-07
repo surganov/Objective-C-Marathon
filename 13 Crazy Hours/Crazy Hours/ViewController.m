@@ -25,29 +25,31 @@
 - (void)setHours:(NSInteger)hours
 {
 	NSDictionary *crazyHours = @{@1:@7,@2:@12,@3:@5,@4:@10,@5:@3,@6:@8,@7:@1,@8:@6,@9:@11,@10:@4,@11:@9,@12:@2};
+
 	if (hours > 12) {
-		_hours = (int) (hours - 12);
-	} else if (hours < 0) {
-		_hours = (int) (12 + hours);
+		_hours = hours % 12;
 	} else {
-		_hours = (int) (hours);
+		_hours = hours;
 	}
+	
 	NSLog(@"hours:%i",_hours);
-	self.hourHand.transform = CATransform3DMakeRotation((_hours * 30 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
+	
+	self.hourHand.transform = CATransform3DMakeRotation(([crazyHours[[NSNumber numberWithInt:_hours]] intValue] * 30 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
+//	self.hourHand.transform = CATransform3DMakeRotation((_hours * 30 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
 }
 
 - (void)setMinutes:(NSInteger)minutes
 {
-	if (minutes % 60 == 60 || minutes % 60 == 0) {
-		_minutes = (int) (minutes - 60);
+	if (minutes > 60) {
+		_minutes = minutes % 60;
+	} else if (minutes == 60) {
+		_minutes = minutes;
 		self.hours++;
-	} else if (minutes < 0) {
-		_minutes = (int) (60 + minutes);
-		self.hours--;
 	} else {
-		_minutes = (int) (minutes);
+		_minutes = minutes;
 	}
-	NSLog(@"minutes:%i",_minutes);
+	
+//	NSLog(@"minutes:%i",_minutes);
 	self.minuteHand.transform = CATransform3DMakeRotation((_minutes * 6 + 180.0) / 180.0 * M_PI, 0.0, 0.0, 1.0);
 }
 
@@ -77,9 +79,17 @@
 - (IBAction)rotateGesture:(UIRotationGestureRecognizer *)gesture
 {
 //	self.minuteHand.transform = CATransform3DMakeRotation(gesture.rotation*1.5, 0.0, 0.0, 1.0);
-//	CGFloat minutes = gesture.rotation * 180.0 / M_PI / 6;
-//	NSLog(@"%f", minutes);
-	self.minutes = gesture.rotation * 180.0 / M_PI / 6;
+	static CGFloat lastState;
+	CGFloat translation;
+	if (UIGestureRecognizerStateChanged) {
+		translation = gesture.rotation - lastState;
+		lastState = gesture.rotation;
+	}
+
+	CGFloat minutes = translation * 180.0 / M_PI / 6;
+	self.minutes += minutes * 2;
+//	NSLog(@"%i",self.minutes);
+
 }
 
 
