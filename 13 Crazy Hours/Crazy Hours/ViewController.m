@@ -70,8 +70,8 @@
 #pragma mark - Gestures
 - (IBAction)singleTap:(id)sender
 {
-	if (self.minutes < 55) {
-		self.minutes = 55;
+	if (self.minutes < 50) {
+		self.minutes = 50;
 	}
 	self.minutes++;
 }
@@ -105,11 +105,11 @@
 	self.seconds = [ClockModel currentSeconds];
 	
 	self.minutes = [ClockModel currentMinutes];
-	self.minuteHand = [self createClockHandWithSize:CGPointMake(10, 100) WithColor:[UIColor redColor] AtTime:self.minutes];
+	self.minuteHand = [self createClockHandWithSize:CGPointMake(10, 100) WithColor:[UIColor whiteColor] AtTime:self.minutes];
 	[self.view.layer addSublayer:self.minuteHand];
 	
 	self.hours = [ClockModel currentHours];
-	self.hourHand = [self createClockHandWithSize:CGPointMake(10, 80) WithColor:[UIColor blackColor] AtTime:self.hours];
+	self.hourHand = [self createClockHandWithSize:CGPointMake(10, 80) WithColor:[UIColor grayColor] AtTime:self.hours];
 	[self.view.layer addSublayer:self.hourHand];
 
 	[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
