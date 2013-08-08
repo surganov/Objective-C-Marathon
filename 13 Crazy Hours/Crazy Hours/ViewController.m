@@ -93,6 +93,7 @@
 
 }
 
+#define OFFSET 20
 
 #pragma mark - Setting the view
 - (void)viewDidLoad
@@ -103,17 +104,29 @@
 	bg.contents = (id) [UIImage imageNamed:@"crazy-hours-bg.png"].CGImage;
 	[self.view.layer addSublayer:bg];
 	
+	CALayer *bigCircle = [CALayer layer];
+	bigCircle.frame = CGRectMake(self.view.center.x-14, self.view.center.y-14-OFFSET, 27, 27);
+	bigCircle.contents = (id) [UIImage imageNamed:@"clock-big-circle.png"].CGImage;
+	[self.view.layer addSublayer:bigCircle];
+	
 	self.seconds = [ClockModel currentSeconds];
 	
 	self.minutes = [ClockModel currentMinutes];
-	self.minuteHand = [self createClockHandWithSize:CGPointMake(10, 100) WithColor:[UIColor whiteColor] AtTime:self.minutes];
+	self.minuteHand = [self createClockHandWithSize:CGPointMake(19, 127) withImage:[UIImage imageNamed:@"clock-minute-hand.png"] atTime:self.minutes];
 	[self.view.layer addSublayer:self.minuteHand];
 	
 	self.hours = [ClockModel currentHours];
-	self.hourHand = [self createClockHandWithSize:CGPointMake(10, 80) WithColor:[UIColor grayColor] AtTime:self.hours];
+	self.hourHand = [self createClockHandWithSize:CGPointMake(30, 86) withImage:[UIImage imageNamed:@"clock-hour-hand.png"] atTime:self.hours];
 	[self.view.layer addSublayer:self.hourHand];
 
 	[NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+	
+	
+	
+	CALayer *smallCircle = [CALayer layer];
+	smallCircle.frame = CGRectMake(self.view.center.x-10, self.view.center.y-10-OFFSET, 19, 19);
+	smallCircle.contents = (id) [UIImage imageNamed:@"clock-small-circle.png"].CGImage;
+	[self.view.layer addSublayer:smallCircle];
 }
 
 - (void) tick:(NSTimer *)timer
@@ -135,17 +148,17 @@
 	[self.view.layer addSublayer:bgGradient];
 }
 
-- (CALayer *)createClockHandWithSize:(CGPoint)size WithColor:(UIColor*)color AtTime:(NSInteger)time
+- (CALayer *)createClockHandWithSize:(CGPoint)size withImage:(UIImage*)image atTime:(NSInteger)time
 {
 	CALayer *clockHand = [CALayer layer];
-	clockHand.backgroundColor = color.CGColor;
+	clockHand.contents = (id) image.CGImage;
 	clockHand.edgeAntialiasingMask = kCALayerLeftEdge | kCALayerRightEdge | kCALayerBottomEdge | kCALayerTopEdge;
 	
 	CGPoint centerPoint = self.view.center;
 	clockHand.frame = CGRectMake(centerPoint.x, centerPoint.y, size.x, size.y);
 	clockHand.anchorPoint = CGPointMake(0.5, 0);
 	clockHand.position = CGPointMake(clockHand.position.x-clockHand.frame.size.width/2,
-									 clockHand.position.y-clockHand.frame.size.height/2);
+									 clockHand.position.y-clockHand.frame.size.height/2-OFFSET);
 	
 	// set seconds hand at 0 point
 	clockHand.transform = CATransform3DMakeRotation(180.0 / 180.0 * M_PI, 0.0, 0.0, 1.0);
