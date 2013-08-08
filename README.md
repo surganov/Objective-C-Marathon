@@ -53,15 +53,17 @@ Hello everybody! I'm a graphic designer from Moscow. I'm learning how to program
 #### 13. Crazy Hours
 *What I learned:* that making a analog clock abstraction it's not easy task at all, there was a lot of refactoring and rewriting
 
+#### 14. Exit
+*What I learned:* making force exit from the app, imitating modal window using storyboard
 
 ## Wanna learn
-1. How to animate UIViews (especially transitions between them)
-2. Concepts of protocols and delegations
-3. Object oriented programming concepts in practice: A PIE (Abstraction, Polymorphism, Inheritance, Encapsulation)
-4. How to store data between user sessions
-5. UIGestureRecognizer and all possible gestures in iOS
-6. Frame animation
-7. Scroll views
+1. Concepts of protocols and delegations
+2. Object oriented programming concepts in practice: A PIE (Abstraction, Polymorphism, Inheritance, Encapsulation)
+3. How to store data between user sessions
+4. UIGestureRecognizer and all possible gestures in iOS
+5. Frame animation
+6. Scroll views
+7. Table views
 
 ## Contribution
 Feel free to pull requests to my code.
